@@ -114,10 +114,13 @@ img{
     margin-bottom: 100px;
 }
 .popular-tours .text-container{
-    max-width: 577px;
+    width: 577px;
 }
 .popular-tours .image-container{
-    max-width: 540px;
+    width: 540px;
+}
+.popular-tours .image-container img{
+    width: 100%;
 }
 .popular-tours p,li{
     margin-bottom: 2rem;
@@ -226,15 +229,17 @@ img{
 /* perfect place section */
 .perfect-place-section{
     display: flex;
-    height: 424px;
     gap:1.6rem;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
+    margin-top: 6.25rem;
+    margin-bottom: 6.25rem;
 }
 .perfect-place-section .title-text,.text-info{
     text-align: left;
 }
 .perfect-place-section .text-container{
     width: 510px;
+    height: 26.375rem;
     text-align: left;
 }
 .perfect-place-section .img-container{
@@ -273,6 +278,82 @@ img{
     font-weight: 700;
     color: rgb(19, 19, 24);
 }
+/* news-letter-section */
+.news-letter-section{
+    display: flex;
+    justify-content: space-between;
+}
+.news-letter-section .form-container{
+    width: 474px;
+    padding:2.5rem;
+}
+.form{
+    border-top: 1px solid rgba(19, 19, 24, 0.1);
+    width: 393px;
+}
+
+.news-letter-section .form-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.25rem;
+    }
+.form input{
+    width: 389px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+}
+.form input[type="text"],input[type="email"]{
+    background: rgba(19, 19, 24, 0.05);
+}
+.form input[type="text"],input[type="email"]::placeholder{
+    padding-left: 1.25rem;
+}
+.form input[type="text"]{
+    margin-bottom: 1rem;
+    margin-top: 1.53rem;
+    width: 369px;
+}
+.form input[type="email"]{
+    margin-bottom: 1.5rem;
+}
+.form input[type="btn"]{
+    text-align: center;
+}
+.news-letter-section .image-container{
+    background-image: url('../Images/rectangle-8.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 672px;
+    height: 422px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.news-letter-section .image-container .discount-box{
+    width:324px;
+    height: 120px;
+    border-radius: 16px;
+    background: rgb(255, 84, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-19.63deg);
+    margin-bottom: 48px;
+    margin-right: 6px;
+    color: rgb(255, 255, 255);
+}
+.discount-box .discount-title{
+    font-size: 32px;
+    /* text-align: left; */
+}
+.discount-box .discount-link{
+    font-size:24px;
+}
+
 /* mobile devices */
 @media screen and (max-width:600px) {
     body{
@@ -299,6 +380,7 @@ img{
     }
     .popular-tours .image-container{
         margin-top: 30px;
+        width: 335px;
     }
     .destination-img-container{
         flex-direction: column;
@@ -308,10 +390,42 @@ img{
     }
     .perfect-place-section .text-container{
         width: 335px;
-        /* height:200px ; */
+        height:30rem;
+        margin-bottom: 1.5rem;
     }
     .perfect-place-section .img-container{
         width: 335px;
         height:200px ;
     }
+    .news-letter-section{
+        flex-direction: column;
+    }
+    .news-letter-section .form-container{
+        width:335px;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+    .news-letter-section .image-container{
+        width: 335px;
+        height: 200px;
+    }
+    .form input{
+        width: 335px;
+    }
+    .form input[type="text"]{
+        width:315px;
+    }
+    .news-letter-section .image-container .discount-box{
+        width:214px;
+        height: 79px;
+        margin-bottom: 30px;
+        margin-right: 0px;
+    }
+    .discount-box .discount-title{
+        font-size: 21px;
+    }
+    .discount-box .discount-link{
+        font-size: 15.85px;
+    }
+    
 }
