@@ -78,6 +78,9 @@ nav>ul li a{
     font-size: 1.2rem;
     font-weight: 700;
     line-height: 1.45rem;
+    color: rgb(66, 66, 71);
+}
+nav>ul li:first-child a{
     color: rgb(255, 84, 0);
 }
 
@@ -174,11 +177,13 @@ nav>ul li a{
 .destination-section{
     margin-bottom: 100px;
 }
-.destination-section >h1,p{
-    text-align: center;
-}
 .destination-section h1{
+    text-align: center;
     margin-bottom: 1.5rem;
+}
+
+.destination-section .text-info{
+    text-align: center;
 }
 
 .destination-img-container{
@@ -258,11 +263,89 @@ nav>ul li a{
     margin-top:1.5rem;
     border-radius: 1rem;
 }
+/* deals section start */
+.deals-section{
+    margin-top: 6.675rem;
+}
+.deals-text-container{
+    margin-bottom: 3rem;
+}
+.deals-section .title-text{
+    text-align: center;
+}
+.deals-section .text-info{
+    text-align: center;
+}
+.deals-img-container{
+    width: 100%;
+    height: 500px;
+    background-image: url('../Images/deals1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.deals-img-container .card-container{
+    width: 48%;
+    height: 85%;
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 16px;
+    margin-right: 3%;
+}
+.deals-img-container .title-text{
+    text-align: center;
+}
+.info-container small{
+    color: rgb(255, 84, 0);
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+.deals-img-container .btn-primary{
+    margin-top: 1.5rem;
+}
+.deals-img-container .icon-container,.info-container{
+    width:79.2%;
+}
+.deals-img-container .card-container img{
+    width: 16.5px;
+    height: 20.5px;
+    margin-right: 8px;
+}
+.deals-img-container .icon-container{
+    margin-top:9%;
+}
+.deals-img-container .icon-container ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.deals-img-container .icon-container ul li{
+    display: flex;
+    margin-right: 1.5rem;
+}
+.deals-img-container .info-container{
+    margin-left: 8%;   
+}
 
+.deals-second .deals-img-container{
+    background-image: url('../Images/deals2.png');
+    display: flex;
+    justify-content: left;
+}
+.deals-second .deals-img-container .card-container{
+    margin-left: 3%;
+}
 /* choose section styles */
-.choose-section .title-text,.text-info{
+
+.choose-section .title-text{
     text-align: center;
     margin-bottom: 1.5rem;
+}
+.choose-section .text-info{
+    text-align: center;
 }
 .choose-card-container{
     display: flex;
@@ -307,12 +390,12 @@ nav>ul li a{
     text-align: left;
 }
 .perfect-place-section .text-container{
-    width: 510px;
+    width: 44.71%;
     height: 26.375rem;
     text-align: left;
 }
 .perfect-place-section .img-container{
-    width: 610px;
+    width: 50%;
     background-image: url('../Images/perfect-place.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -433,6 +516,42 @@ nav>ul li a{
 .discount-box .discount-link{
     font-size:24px;
 }
+/* feedback section styles */
+.feedback{
+    margin-top: 6rem;
+}
+.feedback h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.feedback-section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+.feedback-section .card{
+    width: 335px;
+    padding: 5%;
+    border: 1px solid rgb(255, 84, 0);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+/* .feedback-section .img-container{
+    text-align: center;
+} */
+.feedback-section .img-container img{
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: .8rem;
+
+}
+.feedback-section .review-details{
+    width: 60%;
+}
 /* footer styles */
 
 footer{
@@ -483,6 +602,9 @@ footer .text-info{
 }
 .social-icon{
     margin-bottom: 3.12rem;
+}
+.footer-mini-title{
+    text-align: center;
 }
 /* mobile devices */
 @media screen and (max-width:600px) {
@@ -535,8 +657,12 @@ footer .text-info{
         width: 95%;
     }
     .perfect-place-section .img-container{
+        width: 100%;
         height:200px ;
         margin-top: 2rem;
+    }
+    .perfect-place-section .text-container{
+        width: 100%;
     }
     .news-letter-section{
         flex-direction: column;
@@ -559,6 +685,37 @@ footer .text-info{
     }
     .discount-box .discount-link{
         font-size: 15.85px;
+    }
+
+    .deals-img-container{
+        width: 100%;
+        justify-content: center;
+        align-items: end;
+        height: 550px;
+    }
+    .deals-img-container .icon-container,.info-container{
+        width:100%
+    }
+    .deals-img-container .card-container{
+        width: 80%;
+        margin-bottom: 3%;
+        height: 70%;
+    }
+    .deals-img-container .card-container .text-info{
+        text-align: left;
+    }
+    .deals-img-container .icon-container{
+        margin-top:3%;
+    }
+    .deals-img-container .info-container .title-text{
+        font-size: 1.5rem;
+    }
+    .deals-img-container small{
+        margin-top: 0.01%;
+    }
+    .deals-second .deals-img-container{
+        display: flex;
+        justify-content: left;
     }
     footer{
         /* width: 500px; */
